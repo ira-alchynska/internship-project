@@ -4,7 +4,7 @@ const BASE_URL = "https://internship-project-react.herokuapp.com";
 
 export const getCities = async (page, limit = 10) => {
   const { data } = await axios.get(
-    `${BASE_URL}/cities/?_page=${page}&_limit=${limit}`
+    `${BASE_URL}/api/cities/?_page=${page}&_limit=${limit}`
   );
 
   return data;
