@@ -13,8 +13,9 @@ server.use(middlewares);
 // );
 server.use("/api", router);
 server.get("*", function (req, res) {
-  res.redirect("/");
+  //   res.redirect("/");
+  res.sendfile(__dirname + "/build/index.html");
 });
 server.listen(PORT, () => {
-  console.log("Server is running");
+  console.log("Server is running", PORT);
 });
