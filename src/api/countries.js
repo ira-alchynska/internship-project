@@ -11,7 +11,7 @@ export const getCountries = async (page, limit = 10) => {
 };
 
 export const putCountries = async (country, id) => {
-  const { data } = await axios.put(`${BASE_URL}/countries/${id}/`, country);
+  const { data } = await axios.put(`${BASE_URL}/api/countries/${id}`, country);
 
   return data;
 };

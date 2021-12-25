@@ -11,7 +11,7 @@ export const getStates = async (page, limit = 10) => {
 };
 
 export const putStates = async (state, id) => {
-  const { data } = await axios.put(`${BASE_URL}/states/${id}/`, state);
+  const { data } = await axios.put(`${BASE_URL}/api/states/${id}`, state);
 
   return data;
 };

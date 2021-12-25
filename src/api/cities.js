@@ -11,7 +11,7 @@ export const getCities = async (page, limit = 10) => {
 };
 
 export const putCities = async (city, id) => {
-  const { data } = await axios.put(`${BASE_URL}/cities/${id}/`, city);
+  const { data } = await axios.put(`${BASE_URL}/api/cities/${id}`, city);
 
   return data;
 };
