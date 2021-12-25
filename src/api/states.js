@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://internship-project-react.herokuapp.com/";
+const BASE_URL = "https://internship-project-react.herokuapp.com";
 
 export const getStates = async (page, limit = 10) => {
   const { data } = await axios.get(
