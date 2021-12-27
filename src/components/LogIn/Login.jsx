@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setIsAuthenticated } from "../../redux/auth/authActions.js";
+import formValidationLogin from "./ValidationLogin";
 import "./styles.css";
 
 const Login = () => {
@@ -14,6 +15,10 @@ const Login = () => {
   const handleEmailChange = (e) => {
     setEmailInput(e.target.value);
   };
+
+  const errors = formValidationLogin({ emailInput, passwordInput });
+
+  const hasErrors = !!Object.values(errors).length;
 
   const handlePasswordChange = (e) => {
     setPasswordInput(e.target.value);
@@ -59,7 +64,7 @@ const Login = () => {
                 onChange={handleEmailChange}
               />
             </div>
-
+            {errors.email && <p className="error">{errors.email}</p>}
             <div className="form-group">
               <input
                 type="password"
@@ -71,8 +76,8 @@ const Login = () => {
                 onChange={handlePasswordChange}
               />
             </div>
-
-            <button type="submit" className="btn-login">
+            {errors.password && <p className="error">{errors.password}</p>}
+            <button disabled={hasErrors} type="submit" className="btn-login">
               Submit
             </button>
           </div>

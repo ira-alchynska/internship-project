@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import CountriesSelectors from "../../redux/countries/selectors.js";
-import { setFilterValue } from "../../redux/countries/actions.js";
+import {
+  setFilterValue,
+  incrementCountriesPage,
+} from "../../redux/countries/actions.js";
 import { fetchCountries } from "../../redux/countries/actions.js";
 import { useSelector, useDispatch } from "react-redux";
 import "./styles.css";
@@ -18,6 +21,7 @@ const CountryCardList = () => {
   useEffect(() => {
     if (!countriesData.length) {
       onShowMore();
+      dispatch(incrementCountriesPage());
     }
 
     return () => {
