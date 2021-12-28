@@ -13,8 +13,8 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  width: 1202px;
-  border: 3px solid black;
+  max-width: 1202px;
+  border: 2px solid black;
   margin-right: auto;
   margin-left: auto;
 }
