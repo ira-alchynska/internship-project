@@ -15,13 +15,13 @@ const CountryCardList = () => {
   const filterValue = useSelector(CountriesSelectors.selectFilterValue);
 
   const onShowMore = () => {
+    dispatch(incrementCountriesPage());
     dispatch(fetchCountries());
   };
 
   useEffect(() => {
     if (!countriesData.length) {
-      dispatch(incrementCountriesPage());
-      onShowMore();
+      dispatch(fetchCountries());
     }
 
     return () => {
