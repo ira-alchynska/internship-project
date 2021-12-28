@@ -64,7 +64,7 @@ const Login = () => {
                 onChange={handleEmailChange}
               />
             </div>
-            {errors.email && <p className="error">{errors.email}</p>}
+            {errors.email && <p className="error-log">{errors.email}</p>}
             <div className="form-group">
               <input
                 type="password"
@@ -76,7 +76,7 @@ const Login = () => {
                 onChange={handlePasswordChange}
               />
             </div>
-            {errors.password && <p className="error">{errors.password}</p>}
+            {errors.password && <p className="error-log">{errors.password}</p>}
             <button disabled={hasErrors} type="submit" className="btn-login">
               Submit
             </button>
