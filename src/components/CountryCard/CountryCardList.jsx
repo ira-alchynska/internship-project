@@ -19,15 +19,15 @@ const CountryCardList = () => {
   };
 
   useEffect(() => {
-    if (!countriesData.length) {
-      onShowMore();
+    if (countriesData.length) {
       dispatch(incrementCountriesPage());
+      onShowMore();
     }
 
     return () => {
       dispatch(setFilterValue(""));
     };
-  }, []);
+  }, [countriesData.length, dispatch]);
 
   const handleChange = (e) => {
     dispatch(setFilterValue(e.target.value));
