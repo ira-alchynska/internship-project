@@ -15,7 +15,8 @@
   padding: 20px;
   width: 1202px;
   border: 1px solid black;
-  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 .NavLink {
   /* margin-right: 150px; */
