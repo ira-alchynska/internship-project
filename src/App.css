@@ -1,7 +1,8 @@
 .App {
   font-family: "Roboto", sans-serif;
   text-align: center;
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
   padding: 15px 30px;
   font-size: 18px;
   font-weight: 400;
